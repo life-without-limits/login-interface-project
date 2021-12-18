@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./login-interface.css" />
+		<!-- 引入外部js文件：
+		<script src="./ID-authentication.js" type="text/javascript" charset="utf-8"></script> -->
+		<script type="text/javascript">
+			window.onload = function ()
+			{
+				document.getElementById("button").onclick = function() {
+				        var a=document.getElementById("tel").value;
+						var b=document.getElementById("pwd").value;
+						var c=document.getElementById("pwd-again").value;
+						// Map是一组键值对的结构，具有极快的查找速度
+						var map=new Map([
+						[a=="","请输入账号"],
+						[b.length<6,"密码长度不能小于6位"],
+						[b!=c,"请确认两次密码相同！"],
+						]);
+						map.forEach(function (value, key) {
+							if(key){
+								alert(value);
+							}
+						});
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<form method="post">
+			<p>
+				<label for="tel">账号</label>
+				<input id="tel" type="text"/>
+			</p>
+			<p>
+				<label for="pwd">密码</label>
+				<input id="pwd" type="password"/>
+			</p>
+			<p>
+				<label for="pwd-again">密码验证</label>
+				<input id="pwd-again" type="password"/>
+			</p>
+			<p>
+			    <input id="button" type="button" value="确定">
+			</p>
+	</body>
+</html>

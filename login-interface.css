@@ -1,0 +1,54 @@
+<style type="text/css">
+    /* 去除浏览器默认样式，方法1：html文件head头部引入reset文件
+    <link rel="stylesheet" href="./css-reset.css" /> */
+	
+	/*去除浏览器默认样式，方法2：简单粗暴，但复杂页面不适合用：*/
+	*{
+		margin:0;
+		padding:0;
+	}
+	form
+	{
+		width:320px;
+		font-family:Arial;
+		font-size:14px;
+		font-weight:bold;
+		background:palevioletred;
+		padding:50px;
+		/* 相对浏览器居中设置: */
+		position: fixed;
+		top: 50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+	}
+	/* 清除p中的每一个浮动*/
+	p{overflow:hidden;}
+	label
+	{
+		float:left;
+		width:60px;
+		height:40px;
+		text-align:right;
+		margin-right:10px;
+	}
+	input:not{#button}
+	{
+		float:left;
+		height:16px;
+		padding:10px;
+		border:1px solid silver;
+	}
+	#tel,#pwd,#pwd-again
+	{
+		width:228px;
+	}
+	#button
+	{
+		float:right;
+		width:100px;
+		height:40px;
+		border:1px solid gray;
+		padding:0;
+		background-color:#F1F1F1;
+	}
+</style>
